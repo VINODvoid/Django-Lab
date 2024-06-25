@@ -1,0 +1,13 @@
+{% extends 'registration/base.html' %}
+
+{% block title %}Add Student{% endblock %}
+
+{% block content %}
+<h1>Add Student</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">Add Student</button>
+</form>
+<a href="{% url 'student_list' %}" class="btn">Back to Student List</a>
+{% endblock %}

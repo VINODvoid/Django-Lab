@@ -1,0 +1,16 @@
+{% extends 'registration/base.html' %}
+
+{% block title %}Course Detail{% endblock %}
+
+{% block content %}
+<h1>Course Detail</h1>
+<h2>{{ course.name }}</h2>
+<p>{{ course.description }}</p>
+<h3>Enrolled Students</h3>
+<ul>
+    {% for enrollment in enrollments %}
+        <li>{{ enrollment.student.first_name }} {{ enrollment.student.last_name }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'course_list' %}" class="btn">Back to Course List</a>
+{% endblock %}
