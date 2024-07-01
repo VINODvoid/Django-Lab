@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}Website{% endblock %}
+    </title>
+</head>
+<body>
+    <header>
+        <h1>Brindavan College of Engineering </h1>
+        <nav>
+            <ul>
+                <li><a href=" {% url "home" %}">Home</a></li>
+                <li><a href="{% url "about" %}">About</a></li>
+                <li><a href="{% url "contact" %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        &copy; All Rights are Reserved by GOD 
+    </footer>
+</body>
+</html>
